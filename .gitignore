@@ -1,0 +1,4 @@
+.config/
+.replit
+replit.nix
+.env
