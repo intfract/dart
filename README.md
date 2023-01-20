@@ -1,3 +1,3 @@
 # Dart
 
-Mathematics and computer science utilites! 
+A utility library made with Replit!
