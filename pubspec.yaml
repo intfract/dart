@@ -1,7 +1,9 @@
-name: MyApp
-description: ""
-dependencies:
-  http: ^0.13.5
+name: volt
+description: 'A utility library with detailed pretty printing!'
+version: 0.0.1
+repository: https://github.com/intfract/dart
+homepage: https://github.com/intfract
+
 dev_dependencies: {}
 environment:
   sdk: '>=2.10.0 <3.0.0'
