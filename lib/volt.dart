@@ -43,12 +43,12 @@ String format(entity, [indent = 0]) {
         );
       } else if (v is MethodMirror) {
         pairs.add(
-          '${tab * (indent + 1)}${(v.isPrivate) ? 'private ' : ''}${(v.isStatic) ? 'static' : ''}${(v.isAbstract) ? 'abstract ' : ''}${exp.firstMatch(v.returnType.toString())![0]} $name => ${v.source?.replaceAll('\n', '\n${tab * indent}')};'
+          '${tab * (indent + 1)}${(v.isPrivate) ? 'private ' : ''}${(v.isStatic) ? 'static ' : ''}${(v.isAbstract) ? 'abstract ' : ''}${exp.firstMatch(v.returnType.toString())![0]} $name => ${v.source?.replaceAll('\n', '\n${tab * indent}')};'
         );
       }
     }
 
-    return '${entity.runtimeType} (${pairs.length}) {\n${pairs.join('\n')}\n${tab * indent}}';
+    return '${entity.runtimeType} (${pairs.length}) {\n${pairs.join('\n')}\n${tab * indent}}, String (${entity.toString().length}) {\n${tab * (indent + 1)}${format(entity.toString())}\n${tab * indent}}';
   }
   return entity.toString();
 }

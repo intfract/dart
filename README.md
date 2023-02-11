@@ -46,7 +46,7 @@ LinkedHashMap (3) {
   "test": Test (4) {
     int id;
     static const final int original;
-    staticvoid greet => static void greet(String name) {
+    static void greet => static void greet(String name) {
       print('Hello, $name!');
     };
     Test Test => null;
